@@ -4,7 +4,7 @@ pipeline {
         stage("Setup a swapfile") {
             steps {
                 sh '''
-                sudo chmod +x ./scripts/create_swapfile
+                chmod +x ./scripts/create_swapfile
                 ./scripts/create_swapfile
                 '''         
             }
