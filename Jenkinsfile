@@ -1,14 +1,6 @@
 pipeline {
     agent { label "agent1" }
     stages {
-        stage("Setup a swapfile") {
-            steps {
-                sh '''
-                chmod +x ./scripts/create_swapfile
-                ./scripts/create_swapfile
-                '''         
-            }
-        }
         stage("Initialize the database") {
             steps {
                 sh '''
