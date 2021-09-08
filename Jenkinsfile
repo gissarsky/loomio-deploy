@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Initialize the database") {
             steps {
-                sh '''
+                sudo sh '''
                 docker-compose up -d db
                 docker-compose run app rake db:setup
                 '''                
