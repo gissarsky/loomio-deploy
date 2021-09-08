@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''
                 sudo chmod +x ./scripts/create_swapfile
-                sudo ./scripts/create_swapfile
+                ./scripts/create_swapfile
                 '''         
             }
         }
