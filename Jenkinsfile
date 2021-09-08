@@ -2,7 +2,7 @@ pipeline {
     agent { label "agent1" }
     
     stages {
-        stage("Starting the services") {
+        stage("Create env") {
             steps {
                 sh '''
                 chmod +x ./scripts/create_env
