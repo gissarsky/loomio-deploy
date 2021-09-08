@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage("Setup a swapfile") {
             steps {
-                sh "./scripts/create_swapfile"         
+                sh '''
+                chmod +x ./scripts/create_swapfile
+                ./scripts/create_swapfile
+                '''         
             }
         }
         stage("Initialize the database") {
